@@ -1,2 +1,2 @@
 #!/bin/bash
-cat file-1
+echo "(Ôo)"
