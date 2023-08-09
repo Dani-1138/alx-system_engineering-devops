@@ -1,0 +1,142 @@
+[34m
+* Datadog Agent 7 install script v1.20.0
+[0m
+[34m
+* Installing apt-transport-https, curl and gnupg
+[0m
+Get:1 http://repo.mysql.com trusty InRelease [34.0 kB]
+Ign http://archive.ubuntu.com trusty InRelease
+Get:2 http://archive.ubuntu.com trusty-updates InRelease [56.4 kB]
+Get:3 http://security.ubuntu.com trusty-security InRelease [56.4 kB]
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Hit http://archive.ubuntu.com trusty Release.gpg
+Hit http://archive.ubuntu.com trusty Release
+Ign http://repo.mysql.com trusty InRelease
+Hit http://repo.mysql.com trusty/mysql-5.7-dmr amd64 Packages
+Get:4 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1460 kB]
+Get:5 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [28.7 kB]
+Get:6 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [884 kB]
+Get:7 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [21.7 kB]
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Get:8 http://security.ubuntu.com trusty-security/main amd64 Packages [877 kB]
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Get:9 https://esm.ubuntu.com trusty-infra-security InRelease
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Get:10 https://esm.ubuntu.com trusty-infra-updates InRelease
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Get:11 http://security.ubuntu.com trusty-security/restricted amd64 Packages [24.6 kB]
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Get:12 http://security.ubuntu.com trusty-security/universe amd64 Packages [490 kB]
+Get:13 https://esm.ubuntu.com trusty-infra-security/main amd64 Packages
+Get:14 http://security.ubuntu.com trusty-security/multiverse amd64 Packages [6133 B]
+Get:15 https://esm.ubuntu.com trusty-infra-updates/main amd64 Packages
+Fetched 4711 kB in 15s (300 kB/s)
+Reading package lists...
+W: GPG error: http://repo.mysql.com trusty InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 467B942D3A79BD29
+W: Size of file /var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-updates_main_binary-amd64_Packages.gz is not what the server reported 1459647 1459817
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/main amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_main_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/restricted amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_restricted_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/universe amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_universe_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/multiverse amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_multiverse_binary-amd64_Packages.gz)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+apt-transport-https is already the newest version.
+apt-transport-https set to manually installed.
+curl is already the newest version.
+gnupg is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+[34m
+* Installing APT package sources for Datadog
+[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  6226  100  6226    0     0   230k      0 --:--:-- --:--:-- --:--:--  233k
+gpg: directory `/root/.gnupg' created
+gpg: new configuration file `/root/.gnupg/gpg.conf' created
+gpg: WARNING: options in `/root/.gnupg/gpg.conf' are not yet active during this run
+gpg: keyring `/root/.gnupg/secring.gpg' created
+gpg: /root/.gnupg/trustdb.gpg: trustdb created
+gpg: key F14F620E: public key "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1713  100  1713    0     0  18021      0 --:--:-- --:--:-- --:--:-- 18223
+gpg: key C0962C7D: public key "Datadog, Inc. APT key (2023-04-20) (APT key) <package+aptkey@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  6226  100  6226    0     0  59680      0 --:--:-- --:--:-- --:--:-- 59865
+gpg: key F14F620E: "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  9001  100  9001    0     0  88589      0 --:--:-- --:--:-- --:--:-- 89118
+gpg: key 382E94DE: public key "Datadog, Inc <package@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+Get:1 https://apt.datadoghq.com stable InRelease
+Ign https://apt.datadoghq.com stable InRelease
+Get:2 https://apt.datadoghq.com stable Release
+Get:3 https://apt.datadoghq.com stable/7 amd64 Packages
+Fetched 57.1 kB in 1s (47.7 kB/s)
+Reading package lists...
+  [33mInstalling package(s): datadog-agent datadog-signing-keys
+[0m
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  datadog-agent datadog-signing-keys
+0 upgraded, 2 newly installed, 0 to remove and 1 not upgraded.
+Need to get 390 MB of archives.
+After this operation, 1231 MB of additional disk space will be used.
+Get:1 https://apt.datadoghq.com/ stable/7 datadog-signing-keys all 1:1.3.1-1 [22.3 kB]
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/main amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_main_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/restricted amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_restricted_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/universe amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_universe_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/multiverse amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_multiverse_binary-amd64_Packages.gz)
+Fetched 390 MB in 2min 24s (2693 kB/s)
+Selecting previously unselected package datadog-agent.
+(Reading database ... 37456 files and directories currently installed.)
+Preparing to unpack .../datadog-agent_1%3a7.46.0-1_amd64.deb ...
+Unpacking datadog-agent (1:7.46.0-1) ...
+Selecting previously unselected package datadog-signing-keys.
+Preparing to unpack .../datadog-signing-keys_1%3a1.3.1-1_all.deb ...
+Unpacking datadog-signing-keys (1:1.3.1-1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up datadog-agent (1:7.46.0-1) ...
+Creating dd-agent group
+Creating dd-agent user
+Enabling service datadog-agent
+No datadog.yaml file detected, not starting the agent
+Setting up datadog-signing-keys (1:1.3.1-1) ...
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/main amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_main_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/restricted amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_restricted_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/universe amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_universe_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/multiverse amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_multiverse_binary-amd64_Packages.gz)
+W: You may want to run apt-get update to correct these problems
+[34m
+* Adding your API key to the Datadog Agent configuration: /etc/datadog-agent/datadog.yaml
+[0m
+[34m
+* Setting SITE in the Datadog Agent configuration: /etc/datadog-agent/datadog.yaml
+[0m
+[34m* Starting the Datadog Agent...
+[0m
+[32m  Your Datadog Agent is running and functioning properly.
+[0m[32m  It will continue to run in the background and submit metrics to Datadog.
+[0m[32m  If you ever want to stop the Datadog Agent, run:
+
+       stop datadog-agent
+
+  And to run it again run:
+
+       start datadog-agent[0m
+
